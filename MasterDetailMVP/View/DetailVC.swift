@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  DetailVC.swift
 //  MasterDetailMVP
 //
 //  Created by Miguel on 04/06/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailVC: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 

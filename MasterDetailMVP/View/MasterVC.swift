@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterVC: UITableViewController {
 
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: DetailVC? = nil
     var objects = [Any]()
 
 
@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController {
         navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailVC
         }
     }
 
@@ -45,7 +45,7 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                let controller = (segue.destination as! UINavigationController).topViewController as! DetailVC
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
