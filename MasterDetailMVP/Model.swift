@@ -22,4 +22,12 @@ struct Model<T> {
         }
         objects.remove(at: idx)
     }
+    
+    var count:Int {
+        return objects.count
+    }
+    
+    subscript(idx:Int) -> T? {
+        return objects.indices.contains(idx) ? objects[idx] : nil 
+    }
 }
