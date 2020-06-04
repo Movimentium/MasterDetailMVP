@@ -17,7 +17,7 @@ class DetailVC: UIViewController {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
-                label.text = detail.description
+                label.text = detail
             }
         }
     }
@@ -28,7 +28,7 @@ class DetailVC: UIViewController {
         configureView()
     }
 
-    var detailItem: NSDate? {
+    var detailItem: String? {
         didSet {
             // Update the view.
             configureView()
